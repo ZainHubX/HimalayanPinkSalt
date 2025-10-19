@@ -2,43 +2,51 @@ import { motion } from 'framer-motion';
 import { ProductCard } from '../components/ProductCard';
 import '../assets/css/Products.css';
 
+// Import product images
+import edibleSalt from '../assets/images/edibleSalt.jpg';
+import pinkSalt from '../assets/images/PinkSalt.png';
+import lickSalt from '../assets/images/LickSalt.jpg';
+import himalayanLamp from '../assets/images/HimalayanLamp.png';
+import blackSalt from '../assets/images/BlackSalt.png';
+import saltLamps from '../assets/images/SaltLamps.jpg';
+
 export function Products() {
     const products = [
         {
             id: 1,
-            name: 'Himalayan Pink Salt Lamps',
-            description: 'Natural salt crystal lamps that purify air and create a warm, calming ambiance.',
-            image: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400'
+            name: 'Organic Edible Salt',
+            description: 'Pure, unrefined Himalayan pink salt rich in minerals. Perfect for cooking and seasoning.',
+            image: edibleSalt
         },
         {
             id: 2,
-            name: 'Himalayan Cooking Salt',
-            description: 'Pure, unrefined pink salt rich in minerals. Perfect for cooking and seasoning.',
-            image: 'https://images.unsplash.com/photo-1587677968781-e6f8ab49ef86?w=400'
+            name: 'Pink Bath Salts',
+            description: 'Relaxing bath salts infused with natural Himalayan minerals for ultimate spa experience.',
+            image: pinkSalt
         },
         {
             id: 3,
-            name: 'Salt Bricks & Tiles',
-            description: 'Premium salt blocks for building therapeutic salt rooms and wellness spaces.',
-            image: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=400'
+            name: 'Lick Salt for Animals',
+            description: 'Natural salt blocks providing essential minerals for livestock and pets.',
+            image: lickSalt
         },
         {
             id: 4,
-            name: 'Bath Salt & Spa Products',
-            description: 'Relaxing bath salts and spa essentials infused with Himalayan minerals.',
-            image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400'
+            name: 'Himalayan Salt Lamps',
+            description: 'Natural salt crystal lamps that purify air and create a warm, calming ambiance.',
+            image: himalayanLamp
         },
         {
             id: 5,
-            name: 'Salt Candle Holders',
-            description: 'Hand-carved natural salt candle holders for ambient lighting and décor.',
-            image: 'https://images.unsplash.com/photo-1602874801006-0fbb830a0fd8?w=400'
+            name: 'Natural Himalayan Lamps',
+            description: 'Authentic Himalayan salt lamps for natural air purification and ambient lighting.',
+            image: saltLamps
         },
         {
             id: 6,
-            name: 'Animal Salt Licks',
-            description: 'Natural salt blocks providing essential minerals for livestock and pets.',
-            image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400'
+            name: 'Himalayan Black Salt',
+            description: 'Premium black salt with unique flavor and health benefits. Ideal for cooking.',
+            image: blackSalt
         }
     ];
 
@@ -56,9 +64,9 @@ export function Products() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-center mb-3">Our Products</h2>
+                    <h2 className="text-center mb-3">Our Premium Products</h2>
                     <p className="text-center text-muted mb-5">
-                        Premium Himalayan salt products for wellness, décor, and commercial use
+                        Authentic Himalayan salt products for wellness, décor, and commercial use
                     </p>
                 </motion.div>
 
@@ -81,7 +89,7 @@ export function Products() {
                 >
                     <div className="alert alert-info d-inline-block">
                         <i className="fas fa-info-circle me-2"></i>
-                        Interested in bulk orders? <a href="/distributor" className="alert-link">Become a Distributor</a>
+                        Interested in bulk orders? <a href="/distributor" className="alert-link fw-bold">Become a Distributor</a>
                     </div>
                 </motion.div>
             </div>
