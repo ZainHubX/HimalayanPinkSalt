@@ -1,0 +1,30 @@
+@import './variables.css';
+
+#products {
+    background-color: var(--dark-primary);
+    padding: 5rem 0;
+}
+
+.product-card {
+    background-color: var(--dark-secondary);
+    border: 1px solid rgba(255, 72, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orange-primary);
+    box-shadow: 0 5px 15px rgba(255, 72, 0, 0.2);
+}
+
+.product-card .card-body {
+    background-color: var(--dark-secondary);
+}
+
+.product-card .card-title {
+    color: var(--light-text);
+}
+
+.product-card .card-text {
+    color: var(--gray-text);
+}

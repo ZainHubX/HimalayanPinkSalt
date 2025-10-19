@@ -1,0 +1,52 @@
+@import './variables.css';
+
+.about {
+    background-color: var(--dark-secondary);
+    padding: 5rem 0;
+}
+
+.about-content {
+    padding: 2rem 0;
+}
+
+.about-content h6 {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange-primary);
+}
+
+.about-content .lead {
+    color: var(--gray-text);
+}
+
+.achievement h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--orange-primary);
+}
+
+.achievement p {
+    color: var(--gray-text);
+    margin-bottom: 0;
+}
+
+.about-features p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--gray-text);
+}
+
+.about-features i {
+    color: var(--orange-primary);
+}
+
+.about img {
+    transition: transform 0.3s ease;
+    border: 3px solid var(--orange-primary);
+}
+
+.about img:hover {
+    transform: scale(1.02);
+}

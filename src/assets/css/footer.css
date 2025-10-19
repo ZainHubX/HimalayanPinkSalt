@@ -1,0 +1,15 @@
+@import './variables.css';
+
+footer {
+    background-color: var(--dark-primary) !important;
+    border-top: 1px solid rgba(255, 72, 0, 0.1);
+}
+
+.social-links a {
+    color: var(--gray-text) !important;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--orange-primary) !important;
+}

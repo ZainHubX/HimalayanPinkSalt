@@ -1,0 +1,27 @@
+.feature-box {
+    background: var(--dark-secondary);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 72, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    border-color: var(--orange-primary);
+    box-shadow: 0 5px 15px rgba(255, 72, 0, 0.2);
+}
+
+.feature-box i {
+    color: var(--orange-primary);
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--light-text);
+}
+
+.feature-box p {
+    color: var(--gray-text);
+}
