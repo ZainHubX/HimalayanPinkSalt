@@ -50,12 +50,12 @@ export function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <Link to="/products" className="btn btn-primary btn-lg me-3">
+                        <a href="#products" className="btn btn-primary btn-lg me-3">
                             Explore Products
-                        </Link>
-                        <Link to="/about" className="btn btn-outline-light btn-lg">
+                        </a>
+                        <a href="#about" className="btn btn-outline-light btn-lg">
                             Learn More
-                        </Link>
+                        </a>
                     </motion.div>
                     
                     <div className="hero-features mt-5">

@@ -15,11 +15,11 @@ export function Footer() {
                     <div className="col-md-4 mb-3 mb-md-0">
                         <h5>Quick Links</h5>
                         <ul className="list-unstyled">
-                            <li><Link to="/" className="text-muted">Home</Link></li>
-                            <li><Link to="/about" className="text-muted">About Us</Link></li>
-                            <li><Link to="/products" className="text-muted">Products</Link></li>
-                            <li><Link to="/contact" className="text-muted">Contact</Link></li>
-                            <li><Link to="/distributor" className="text-muted">Become a Distributor</Link></li>
+                            <li><a href="#home" className="text-muted">Home</a></li>
+                            <li><a href="#about" className="text-muted">About Us</a></li>
+                            <li><a href="#products" className="text-muted">Products</a></li>
+                            <li><a hred="#contact" className="text-muted">Contact</a></li>
+                            <li><a href="#distributor" className="text-muted">Become a Distributor</a></li>
                         </ul>
                     </div>
                     <div className="col-md-4">

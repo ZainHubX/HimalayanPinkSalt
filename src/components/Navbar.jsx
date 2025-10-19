@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 export function Navbar() {
@@ -15,9 +15,9 @@ export function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container">
-                <Link className="navbar-brand" to="/" onClick={closeNavbar}>
+                <a className="navbar-brand" href="#home" onClick={closeNavbar}>
                     Himalayan Products
-                </Link>
+                </a>
                 <button 
                     className="navbar-toggler" 
                     type="button" 
@@ -28,33 +28,29 @@ export function Navbar() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
+
+                
                 <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/" onClick={closeNavbar}>
-                                Home
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/about" onClick={closeNavbar}>
-                                About
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/products" onClick={closeNavbar}>
-                                Products
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact" onClick={closeNavbar}>
-                                Contact
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="btn btn-primary btn-sm ms-lg-2" to="/distributor" onClick={closeNavbar}>
-                                Become a Distributor
-                            </Link>
-                        </li>
+                            <a className='nav-link' href="#home" onClick={closeNavbar}>Home</a>
+                         </li>
+
+                            <li className="nav-item">
+                            <a className='nav-link' href="#about" onClick={closeNavbar}>About</a>
+                         </li>
+
+                          <li className="nav-item">
+                            <a className='nav-link' href="#products" onClick={closeNavbar}>Products</a>
+                         </li>
+
+                          <li className="nav-item">
+                            <a className='nav-link' href="#contact" onClick={closeNavbar}>Contact</a>
+                         </li>
+
+                          <li className="nav-item">
+                            <a className='nav-link' href="#distributionform" onClick={closeNavbar}>Become a Distributor</a>
+                         </li>
                     </ul>
                 </div>
             </div>
