@@ -88,92 +88,134 @@ export function Contact() {
         }
     };
 
+    const contactInfo = [
+        {
+            icon: 'fas fa-map-marker-alt',
+            label: 'Location',
+            value: '46 Staple Hill Road, Bristol, BS16 5BS'
+        },
+        {
+            icon: 'fas fa-envelope',
+            label: 'Email',
+            value: 'info@himalayan.co.uk'
+        },
+        {
+            icon: 'fas fa-phone',
+            label: 'Phone',
+            value: '+44 7402 733330'
+        }
+    ];
+
     return (
-        <motion.section 
-            id="contact" 
-            className="py-5"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-        >
+        <section id="contact" className="contact-section">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <h2 className="text-center mb-3">Contact Us</h2>
-                    <p className="text-center text-muted mb-5">
-                        Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-                    </p>
-                </motion.div>
-
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        {status.message && (
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className={`alert ${status.type === 'success' ? 'success-message' : 'error-message'} mb-4`}
-                                role="alert"
-                            >
-                                {status.message}
-                            </motion.div>
-                        )}
-
-                        <motion.form
-                            id="contactForm"
-                            onSubmit={handleSubmit}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                <div className="row align-items-center">
+                    {/* Left Side - Contact Information */}
+                    <div className="col-lg-6 mb-5 mb-lg-0">
+                        <motion.div
+                            className="contact-info-container"
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
                         >
-                            <div className="mb-3">
-                                <label htmlFor="name" className="form-label">Your Name</label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="name"
-                                    name="name"
-                                    placeholder="John Doe"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
+                            <h2 className="contact-title mb-3">Get in Touch with Us</h2>
+                            <p className="contact-subtitle mb-5">
+                                We're here to help and answer any questions you might have. 
+                                We look forward to hearing from you and building a successful partnership.
+                            </p>
 
-                            <div className="mb-3">
-                                <label htmlFor="email" className="form-label">Your Email</label>
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    id="email"
-                                    name="email"
-                                    placeholder="john@example.com"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                />
+                            <div className="contact-details">
+                                {contactInfo.map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="contact-item"
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                                    >
+                                        <div className="contact-icon">
+                                            <i className={item.icon}></i>
+                                        </div>
+                                        <div className="contact-text">
+                                            <h6>{item.label}</h6>
+                                            <p>{item.value}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
                             </div>
+                        </motion.div>
+                    </div>
 
-                            <div className="mb-3">
-                                <label htmlFor="message" className="form-label">Your Message</label>
-                                <textarea
-                                    className="form-control"
-                                    id="message"
-                                    name="message"
-                                    rows="5"
-                                    placeholder="Tell us what you're thinking..."
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                ></textarea>
-                            </div>
+                    {/* Right Side - Contact Form */}
+                    <div className="col-lg-6">
+                        <motion.div
+                            className="contact-form-container"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h3 className="form-title mb-4">Send us a Message</h3>
 
-                            <div className="text-center">
+                            {status.message && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className={`alert ${status.type === 'success' ? 'success-message' : 'error-message'} mb-4`}
+                                    role="alert"
+                                >
+                                    {status.message}
+                                </motion.div>
+                            )}
+
+                            <form onSubmit={handleSubmit}>
+                                <div className="mb-4">
+                                    <label htmlFor="name" className="form-label">Your Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="name"
+                                        name="name"
+                                        placeholder="John Doe"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <label htmlFor="email" className="form-label">Your Email</label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="john@example.com"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <label htmlFor="message" className="form-label">Your Message</label>
+                                    <textarea
+                                        className="form-control"
+                                        id="message"
+                                        name="message"
+                                        rows="5"
+                                        placeholder="Tell us what you're thinking..."
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                    ></textarea>
+                                </div>
+
                                 <button
                                     type="submit"
-                                    className="btn btn-primary btn-lg"
+                                    className="btn btn-primary w-100"
                                     disabled={loading}
                                 >
                                     {loading ? (
@@ -185,34 +227,11 @@ export function Contact() {
                                         'Send Message'
                                     )}
                                 </button>
-                            </div>
-                        </motion.form>
-
-                        {/* Contact Information */}
-                        <motion.div
-                            className="mt-5 text-center"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                        >
-                            <div className="row">
-                                <div className="col-md-4 mb-3">
-                                    <i className="fas fa-map-marker-alt fa-2x text-primary mb-2"></i>
-                                    <p className="mb-0 text-muted">United Kingdom</p>
-                                </div>
-                                <div className="col-md-4 mb-3">
-                                    <i className="fas fa-envelope fa-2x text-primary mb-2"></i>
-                                    <p className="mb-0 text-muted">info@himalayan.co.uk</p>
-                                </div>
-                                <div className="col-md-4 mb-3">
-                                    <i className="fas fa-phone fa-2x text-primary mb-2"></i>
-                                    <p className="mb-0 text-muted">+44 (0) XXX XXX XXXX</p>
-                                </div>
-                            </div>
+                            </form>
                         </motion.div>
                     </div>
                 </div>
             </div>
-        </motion.section>
+        </section>
     );
 }
