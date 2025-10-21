@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import '../assets/css/DistributorForm.css';
 
 export function DistributorForm() {
     const [formData, setFormData] = useState({
@@ -88,17 +89,18 @@ export function DistributorForm() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <section className="py-5" style={{ backgroundColor: 'var(--dark-secondary)', minHeight: '100vh' }}>
+            <section className="distributor-section">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
                             <motion.div
+                                className="distributor-form-wrapper"
                                 initial={{ y: 20 }}
                                 animate={{ y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                             >
-                                <h2 className="text-center mb-3">Become a Distributor</h2>
-                                <p className="text-center text-muted mb-5">
+                                <h2 className="distributor-title text-center mb-3">Become a Distributor</h2>
+                                <p className="distributor-tagline text-center mb-5">
                                     Join our network of trusted distributors and bring premium Himalayan products to your market.
                                 </p>
 

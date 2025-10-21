@@ -1,0 +1,187 @@
+@import './variables.css';
+
+/* Distributor Section */
+.distributor-section {
+    background-color: #000000;
+    min-height: 100vh;
+    padding: 8rem 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Form Wrapper with Glass Effect */
+.distributor-form-wrapper {
+    background: rgba(17, 17, 17, 0.4);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.distributor-title {
+    color: var(--light-text);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tagline */
+.distributor-tagline {
+    color: rgba(204, 204, 204, 0.95);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+/* Form Labels */
+.distributor-form-wrapper .form-label {
+    color: var(--light-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Form Controls with Glass Effect */
+.distributor-form-wrapper .form-control,
+.distributor-form-wrapper .form-select {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.distributor-form-wrapper .form-control:focus,
+.distributor-form-wrapper .form-select:focus {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: var(--orange-primary);
+    box-shadow: 0 0 0 0.25rem rgba(255, 72, 0, 0.15);
+    color: var(--light-text);
+    outline: none;
+}
+
+.distributor-form-wrapper .form-control::placeholder {
+    color: rgba(204, 204, 204, 0.4);
+}
+
+/* Select Dropdown Options */
+.distributor-form-wrapper .form-select option {
+    background-color: var(--dark-secondary);
+    color: var(--light-text);
+}
+
+/* Submit Button */
+.distributor-form-wrapper .btn-primary {
+    padding: 1rem 3rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.distributor-form-wrapper .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 72, 0, 0.4);
+}
+
+.distributor-form-wrapper .btn-primary:disabled {
+    opacity: 0.6;
+    transform: none;
+}
+
+/* Alert Messages */
+.distributor-form-wrapper .alert-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid rgba(40, 167, 69, 0.6);
+    color: var(--light-text);
+    border-radius: 10px;
+}
+
+.distributor-form-wrapper .alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.6);
+    color: var(--light-text);
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .distributor-section {
+        padding: 5rem 0;
+    }
+
+    .distributor-title {
+        font-size: 3rem;
+    }
+
+    .distributor-tagline {
+        font-size: 1.15rem;
+    }
+
+    .distributor-form-wrapper {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .distributor-section {
+        padding: 4rem 0;
+    }
+
+    .distributor-title {
+        font-size: 2.5rem;
+    }
+
+    .distributor-tagline {
+        font-size: 1.05rem;
+    }
+
+    .distributor-form-wrapper {
+        padding: 2rem;
+    }
+
+    .distributor-form-wrapper .btn-primary {
+        padding: 0.9rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .distributor-section {
+        padding: 3rem 0;
+    }
+
+    .distributor-title {
+        font-size: 2rem;
+    }
+
+    .distributor-tagline {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .distributor-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .distributor-form-wrapper .form-control,
+    .distributor-form-wrapper .form-select {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .distributor-form-wrapper .btn-primary {
+        width: 100%;
+        padding: 0.9rem 2rem;
+    }
+}
